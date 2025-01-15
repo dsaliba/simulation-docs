@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Example'
+project = 'Gopher In Unity Simulation'
 copyright = 'workshop participant'
-author = 'workshop participant'
+author = 'Dimitri Saliba'
 release = '0.1'
 
 
