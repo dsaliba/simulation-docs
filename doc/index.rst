@@ -7,6 +7,12 @@ Welcome to Example's documentation!
 ===================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 8
 
    Install.rst
+   Interfaces.rst
+   Enviornment-Building.rst
+   Agent-Building.rst
+   Autonomy.rst
+   Experiments.rst
+   Multi-Agent.rst
