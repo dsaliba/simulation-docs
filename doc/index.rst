@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Example's documentation!
+Nursing Robot Simulation
 ===================================
 
 .. toctree::
@@ -14,5 +14,5 @@ Welcome to Example's documentation!
    Enviornment-Building.rst
    Agent-Building.rst
    Autonomy.rst
-   Experiments.rst
+   Expiriments.rst
    Multi-Agent.rst

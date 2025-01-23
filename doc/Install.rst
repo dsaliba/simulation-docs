@@ -1,6 +1,6 @@
 Install
 ================================================
-The Gopher In Unity Simulation consists of two componants, the Unity enviornment, and the ROS code.
+The Nursing Robot Simulation consists of two componants, the Unity enviornment, and the ROS code.
 
 
 
@@ -60,6 +60,9 @@ Nagivate to the **Prefabs** folder and drag an instance of **Gopher** into the t
 
 .. image:: images/tree.png
    :width: 400
+
+.. warning::
+   This instance should be deleted after the conclusion of this tutorial. When designing expiriments you will spawn robot agents programatically
 
 Next create, in order to varify our connection we will create a simple model publisher. 
 

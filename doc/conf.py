@@ -6,7 +6,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Gopher In Unity Simulation'
+
+project = 'Nursing In Unity Simulation'
 copyright = 'workshop participant'
 author = 'Dimitri Saliba'
 release = '0.1'
@@ -15,7 +16,7 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser']
+extensions = ['myst_parser', 'sphinxsharp.sphinxsharp']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
