@@ -8,10 +8,11 @@ Nursing Robot Simulation
 
 .. toctree::
    :maxdepth: 8
-
+   
    Install.rst
    Interfaces.rst
    Enviornment-Building.rst
+   Objects.rst
    Agent-Building.rst
    Autonomy.rst
    Expiriments.rst
