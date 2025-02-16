@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enviornment Building &mdash; Nursing In Unity Simulation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Objects" href="Objects.html" />
+    <link rel="prev" title="Interfaces" href="Interfaces.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Nursing In Unity Simulation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Interfaces.html">Interfaces</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Enviornment Building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#scene-creation">Scene Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-with-prefabs">Building with Prefabs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reccomendations">Reccomendations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#settings">Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#orginization">Orginization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-custum-prefabs">Creating Custum Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acuratley-modeling-real-enviornment">Acuratley Modeling Real Enviornment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Objects.html">Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Agent-Building.html">Agent Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Autonomy.html">Autonomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Expiriments.html">Expiriments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Multi-Agent.html">Multi Agent</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Nursing In Unity Simulation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Enviornment Building</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Enviornment-Building.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enviornment-building">
+<h1>Enviornment Building<a class="headerlink" href="#enviornment-building" title="Link to this heading"></a></h1>
+<p>Enviornment are contained within a dedicated scene. This scene is then specified for <a class="reference internal" href="Expiriments.html#tasks"><span class="std std-ref">Tasks</span></a> via name.</p>
+<section id="scene-creation">
+<h2>Scene Creation<a class="headerlink" href="#scene-creation" title="Link to this heading"></a></h2>
+<p>The first step to creating a new enviornment is to add a new scene to your unity project. After this, dit is important to register your scene in the build settings. Navigate to <strong>File &gt; Build Settings</strong> and select <strong>Add Open Scenes</strong>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Regiseting a scene in build settings is essential to be able to be able to use it in <a class="reference internal" href="Expiriments.html#tasks"><span class="std std-ref">Tasks</span></a>.</p>
+</div>
+</section>
+<section id="building-with-prefabs">
+<h2>Building with Prefabs<a class="headerlink" href="#building-with-prefabs" title="Link to this heading"></a></h2>
+<p>The reccomended way to build enviornments is with modular prefabs. By default the Nursing in Unity Simulation ships with many useful prefabs for creating and populating a hospital enviornment.</p>
+<p>Prefabs can be found by navigating the file system to <strong>Assets &gt; Prefabs</strong>.</p>
+<section id="reccomendations">
+<h3>Reccomendations<a class="headerlink" href="#reccomendations" title="Link to this heading"></a></h3>
+<p>The Nursing In Unity Simulation provides users complete freedom while desinging scenes, however, this section will offer reccomendations for designing efficient, modular, enviornments.</p>
+<section id="settings">
+<h4>Settings<a class="headerlink" href="#settings" title="Link to this heading"></a></h4>
+<p>While not necesary, enabling grid snapping is reccomended. The exact snapping pattern depends on the size of the prefabs being users, however <strong>0.05</strong> works with most prefabs.
+Grid snapping can be enabled and configured by selecting the coresponding button in the <strong>Scene Pane</strong> as seen below.</p>
+<a class="reference internal image-reference" href="_images/gridsnap.png"><img alt="Grid Snap" src="_images/gridsnap.png" style="width: 400px;" />
+</a>
+</section>
+<section id="orginization">
+<h4>Orginization<a class="headerlink" href="#orginization" title="Link to this heading"></a></h4>
+<p>Another optional but helpful step is organizing scene componants into subgroups via the <strong>Game Object Hiearchy</strong>.
+Below is an example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Scene
+├── Ceiling
+|   └── ...
+├── Hallways
+│   ├── Structure
+|   │   └── ...
+│   ├── Furniture
+|   │   └── ...
+│   └── Lights
+|       └── ...
+├── Operating Room
+│   ├── Structure
+|   │   └── ...
+│   ├── Furniture
+|   │   └── ...
+│   └── Lights
+|       └── ...
+└── Waiting Room
+    ├── Structure
+    │   └── ...
+    ├── Furniture
+    │   └── ...
+    └── Lights
+        └── ...
+</pre></div>
+</div>
+<p>Not only does this make the design proccess easier, but it allows for modular designs that allow for portable, duplicatable, and disableable rooms.</p>
+</section>
+</section>
+</section>
+<section id="creating-custum-prefabs">
+<h2>Creating Custum Prefabs<a class="headerlink" href="#creating-custum-prefabs" title="Link to this heading"></a></h2>
+</section>
+<section id="acuratley-modeling-real-enviornment">
+<h2>Acuratley Modeling Real Enviornment<a class="headerlink" href="#acuratley-modeling-real-enviornment" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Interfaces.html" class="btn btn-neutral float-left" title="Interfaces" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Objects.html" class="btn btn-neutral float-right" title="Objects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright workshop participant.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

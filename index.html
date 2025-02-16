@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nursing Robot Simulation &mdash; Nursing In Unity Simulation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Install" href="Install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Nursing In Unity Simulation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Enviornment-Building.html">Enviornment Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Objects.html">Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Agent-Building.html">Agent Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Autonomy.html">Autonomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Expiriments.html">Expiriments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Multi-Agent.html">Multi Agent</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Nursing In Unity Simulation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nursing Robot Simulation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nursing-robot-simulation">
+<h1>Nursing Robot Simulation<a class="headerlink" href="#nursing-robot-simulation" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Install.html">Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Install.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Install.html#unity-install">Unity Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Install.html#unity-setup">Unity Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Install.html#ros-install">ROS Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Install.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Install.html#unity">Unity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Install.html#ros">ROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Install.html#validation">Validation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Interfaces.html">Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Interfaces.html#control-inputs">Control Inputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Interfaces.html#keyboard-gopher">Keyboard – Gopher</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Enviornment-Building.html">Enviornment Building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Enviornment-Building.html#scene-creation">Scene Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Enviornment-Building.html#building-with-prefabs">Building with Prefabs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Enviornment-Building.html#reccomendations">Reccomendations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Enviornment-Building.html#settings">Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Enviornment-Building.html#orginization">Orginization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Enviornment-Building.html#creating-custum-prefabs">Creating Custum Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Enviornment-Building.html#acuratley-modeling-real-enviornment">Acuratley Modeling Real Enviornment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Objects.html">Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Objects.html#model-creation">Model Creation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Objects.html#model-requirments">Model Requirments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Objects.html#premade-models">Premade Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Objects.html#ai-generation">AI Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Objects.html#bespoke-modeling">Bespoke Modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Objects.html#file-conversion">File Conversion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Objects.html#glb-files">GLB Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Objects.html#model-importing">Model Importing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Objects.html#obj-wavefront-files">Obj Wavefront Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Objects.html#object-configuration">Object Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Objects.html#model">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Objects.html#physics">Physics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Objects.html#rigid-body">Rigid Body</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Objects.html#interaction">Interaction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Objects.html#graspable">Graspable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Objects.html#auto-graspable">Auto Graspable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Objects.html#xr-grab">XR Grab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Agent-Building.html">Agent Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Autonomy.html">Autonomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Expiriments.html">Expiriments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Expiriments.html#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Expiriments.html#task-related-properties">Task-related properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Expiriments.html#scene-setup">Scene Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Expiriments.html#spawnables">Spawnables</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Expiriments.html#spawninfo">SpawnInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="Expiriments.html#robot">Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Expiriments.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Expiriments.html#task-related-functions">Task-related functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Expiriments.html#task-status-functions">Task Status Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Expiriments.html#object-generation-functions">Object Generation Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Multi-Agent.html">Multi Agent</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Install.html" class="btn btn-neutral float-right" title="Install" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright workshop participant.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

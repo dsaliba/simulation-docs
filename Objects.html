@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Objects &mdash; Nursing In Unity Simulation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Agent Building" href="Agent-Building.html" />
+    <link rel="prev" title="Enviornment Building" href="Enviornment-Building.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Nursing In Unity Simulation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Enviornment-Building.html">Enviornment Building</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#model-creation">Model Creation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#model-requirments">Model Requirments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#premade-models">Premade Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ai-generation">AI Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bespoke-modeling">Bespoke Modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#file-conversion">File Conversion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#glb-files">GLB Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#model-importing">Model Importing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#obj-wavefront-files">Obj Wavefront Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#object-configuration">Object Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#model">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#physics">Physics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rigid-body">Rigid Body</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#interaction">Interaction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graspable">Graspable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-graspable">Auto Graspable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xr-grab">XR Grab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Agent-Building.html">Agent Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Autonomy.html">Autonomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Expiriments.html">Expiriments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Multi-Agent.html">Multi Agent</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Nursing In Unity Simulation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Objects</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Objects.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="objects">
+<h1>Objects<a class="headerlink" href="#objects" title="Link to this heading"></a></h1>
+<p>Objects provide both a way to make scenes more intresting, as well as probiding interactable obstacles and goals for tasks.</p>
+<section id="model-creation">
+<h2>Model Creation<a class="headerlink" href="#model-creation" title="Link to this heading"></a></h2>
+<p>The first step in creating any kind of obstacle is building a model. Modeling is is a skillset that can take years to perfect, luckily, if manual modeling is not viable, there are alternate strategies for obtaining textured models.</p>
+<section id="model-requirments">
+<h3>Model Requirments<a class="headerlink" href="#model-requirments" title="Link to this heading"></a></h3>
+<p>Models must be imported in formats that are compatible with Unity. The most popular format being a <strong>.obj</strong> file with an acompanying material and texture image. Some formats use vertex coloring, this does not play well with unity and thus an extra step is required to convert to a useable format.</p>
+</section>
+<section id="premade-models">
+<h3>Premade Models<a class="headerlink" href="#premade-models" title="Link to this heading"></a></h3>
+<p>Many online vendors provide models either for free or for sale. One such vendor is Unit’s own <a class="reference external" href="https://assetstore.unity.com/">Asset Store</a>.</p>
+</section>
+<section id="ai-generation">
+<h3>AI Generation<a class="headerlink" href="#ai-generation" title="Link to this heading"></a></h3>
+<p>Currently AI model generation is in its infancy, however for simple models created from clear reference images, AI model generation can be viable.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to the controversial nature of AI art in relation to ownership, including AI generated content may have liscencing ramifications. Check IP laws before using this aproach.</p>
+</div>
+</section>
+<section id="bespoke-modeling">
+<h3>Bespoke Modeling<a class="headerlink" href="#bespoke-modeling" title="Link to this heading"></a></h3>
+<p>Depending on user skill, simple models can be created from scratch using a program such as blender</p>
+</section>
+</section>
+<section id="file-conversion">
+<h2>File Conversion<a class="headerlink" href="#file-conversion" title="Link to this heading"></a></h2>
+<section id="glb-files">
+<h3>GLB Files<a class="headerlink" href="#glb-files" title="Link to this heading"></a></h3>
+<p><strong>.glb</strong> is a common type for 3D models and textures to be backaged in. Unfortunatley without extensions Unity is unable to import these files directly. Below is a strategy for getting <strong>.glb</strong> files into the Nursing in Unity Simulation.</p>
+<ol class="arabic simple">
+<li><p>Open a new blender project and delete the default cube, light, and camera</p></li>
+<li><p>Import the GLB file into your blender scene.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At this point your mesh will likley apear untextured. This is expected. To verify your mesh has a texture switch your viewport shading to the <strong>Material Preview</strong> mode as shown below.</p>
+</div>
+<a class="reference internal image-reference" href="_images/shading.png"><img alt="_images/shading.png" src="_images/shading.png" style="width: 400px;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>Navigate to the <strong>UV Editing</strong> tab and select <strong>Image &gt; Save As</strong>, save the texture as <strong>&lt;name&gt;.png</strong></p></li>
+<li><p>Select the model and navigate to <strong>File &gt; Export &gt; Wavefront (.obj)</strong>, make sure to export UVs and Normals, save the file as <strong>&lt;name&gt;.obj</strong></p></li>
+</ol>
+<p>At this point you can procede to <a class="reference internal" href="#model-importing"><span class="std std-ref">Model Importing</span></a></p>
+</section>
+</section>
+<section id="model-importing">
+<h2>Model Importing<a class="headerlink" href="#model-importing" title="Link to this heading"></a></h2>
+<section id="obj-wavefront-files">
+<h3>Obj Wavefront Files<a class="headerlink" href="#obj-wavefront-files" title="Link to this heading"></a></h3>
+<p>For this section we will asume you have the files:</p>
+<ul class="simple">
+<li><p><strong>&lt;name&gt;.obj</strong></p></li>
+<li><p><strong>&lt;name&gt;.png</strong></p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Navigate to <strong>Assets &gt; Import New Asset</strong></p></li>
+<li><p>Select both files listed above and click import, both files should show in your asset viewer as below</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/importedobj.png"><img alt="_images/importedobj.png" src="_images/importedobj.png" style="width: 200px;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>Select the model prefab and click the <strong>Extract Masaterials</strong> button in the <strong>Inspector</strong>.</p></li>
+<li><p>When prompted select the folder you want to store the matieral (reccomended location is <strong>assets &gt; material &gt; object</strong>)</p></li>
+<li><p>Rename the material to <strong>&lt;name&gt;</strong></p></li>
+<li><p>Move the imported texture (<strong>name.png</strong>) to the desired location (reccomended location is <strong>assets &gt; texture &gt; object</strong>)</p></li>
+<li><p>Move the model prefab to the desired location (reccomended location is <strong>assets &gt; model &gt; object</strong>)</p></li>
+<li><p>Finally select the imported material, select it, click the target icon next to <strong>Base Map</strong> as shown below, and select your texture</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/basemap.png"><img alt="_images/basemap.png" src="_images/basemap.png" style="width: 400px;" />
+</a>
+<p>Your model is now fully imported and organized. At this point to turn it into a useable prefab see <a class="reference internal" href="#object-configuration"><span class="std std-ref">Object Configuration</span></a></p>
+</section>
+</section>
+<section id="object-configuration">
+<h2>Object Configuration<a class="headerlink" href="#object-configuration" title="Link to this heading"></a></h2>
+<p>The first step when converting a model into a useable asset is creating a prefab. In the asset viewer navigate to the desired folder (reccomended location depends on function i.e. <strong>assets &gt; Prefabs &gt; Interactable</strong> or <strong>assets &gt; Prefabs &gt; Object</strong>) and create a new prefab.
+Once the new prefab is created double click it to open the prefab in the editor.</p>
+<section id="model">
+<h3>Model<a class="headerlink" href="#model" title="Link to this heading"></a></h3>
+<p>Drag your model into the <strong>Game Object Hiearchy</strong>. Multiple models can be used in one prefab if needed. It is reccomended to position models around the origin of the prefab.</p>
+</section>
+<section id="physics">
+<h3>Physics<a class="headerlink" href="#physics" title="Link to this heading"></a></h3>
+<section id="rigid-body">
+<h4>Rigid Body<a class="headerlink" href="#rigid-body" title="Link to this heading"></a></h4>
+<p>The first step in giving our prefab physics is to apply a rigid body. Select the model in the <strong>Game Object Hiearchy</strong> and add a new <strong>Rigid Body</strong> componant. Configure this as desired including adding gravity and mass propeties.</p>
+<p>Next a collider is needed. Depending on the object primative coliders such as <strong>Box Collider</strong> and <strong>Sphere Collider</strong> compnants can be used to create a rough reepresentation of the object.</p>
+</section>
+</section>
+<section id="interaction">
+<h3>Interaction<a class="headerlink" href="#interaction" title="Link to this heading"></a></h3>
+<section id="graspable">
+<h4>Graspable<a class="headerlink" href="#graspable" title="Link to this heading"></a></h4>
+<p>The <strong>Graspable</strong> script must be added to the prefab to allow for robots to properly grasp them</p>
+</section>
+<section id="auto-graspable">
+<h4>Auto Graspable<a class="headerlink" href="#auto-graspable" title="Link to this heading"></a></h4>
+<p>The <strong>Auto Graspable</strong> script must be added to the prefab to allow for robots to properly autonomously grasp them.
+The script  has different properties including a <strong>Grasp Point</strong> this can be specified by creating an <strong>Empty Game Object</strong> in the prefab, and moving it to the desired grasp point.</p>
+</section>
+<section id="xr-grab">
+<h4>XR Grab<a class="headerlink" href="#xr-grab" title="Link to this heading"></a></h4>
+<p>The XR Grab Interactable componant can be applied to make the object manipulatable for XR users such as a VR Nurse.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Enviornment-Building.html" class="btn btn-neutral float-left" title="Enviornment Building" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Agent-Building.html" class="btn btn-neutral float-right" title="Agent Building" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright workshop participant.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

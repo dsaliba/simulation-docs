@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Install &mdash; Nursing In Unity Simulation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Interfaces" href="Interfaces.html" />
+    <link rel="prev" title="Nursing Robot Simulation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Nursing In Unity Simulation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unity-install">Unity Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unity-setup">Unity Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ros-install">ROS Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#unity">Unity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros">ROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#validation">Validation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Enviornment-Building.html">Enviornment Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Objects.html">Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Agent-Building.html">Agent Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Autonomy.html">Autonomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Expiriments.html">Expiriments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Multi-Agent.html">Multi Agent</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Nursing In Unity Simulation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Install</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="install">
+<h1>Install<a class="headerlink" href="#install" title="Link to this heading"></a></h1>
+<p>The Nursing Robot Simulation consists of two componants, the Unity enviornment, and the ROS code.</p>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h2>
+<p>This repository has been developed and tested in Ubuntu 18.04 and ROS Melodic, with the Unity 2020.3 LTS.</p>
+<p>Before running this package, it is highly recommended to go through the tutorial of <a class="reference external" href="https://github.com/Unity-Technologies/Unity-Robotics-Hub">Unity Robotics Hub</a> demo first. They provided a very detailed instruction to set up a robot arm in Unity.
+Also, you should try this <a class="reference external" href="https://github.com/ZhuoyunZhong/Mobile-Robot-Demo-with-Unity-ROS">tutorial on how to set up a mobile robot</a>. The second tutorial provides more robot sensors and ROS publishers and subscribers examples. After these two tutorials, you should be able to understand how to set up a robot in Unity and how to communicate between ROS and Unity.</p>
+</section>
+<section id="unity-install">
+<h2>Unity Install<a class="headerlink" href="#unity-install" title="Link to this heading"></a></h2>
+<p>Download and install the proper Unity version via Unity Hub. In the folder for your unity project, git clone this repository for Unity simulation.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;Unity_Path&gt;/Unity/Projects
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:hiro-wpi/Gopher-In-Unity-Simulation.git
+</pre></div>
+</div>
+</section>
+<section id="unity-setup">
+<h2>Unity Setup<a class="headerlink" href="#unity-setup" title="Link to this heading"></a></h2>
+<p>Open Unity Hub and in the Projects tab, select ADD to add the “Gopher-In-Unity-Simulation” folder. Select Unity version to be 2022.3 and open the project. It is normal for the project to take a long time to run when opened for the first time.</p>
+<p>After launching the project, please navigate to the <strong>Scenes</strong> folder and open the Hospital scene.</p>
+<a class="reference internal image-reference" href="_images/hospital.png"><img alt="Hospital Scene" src="_images/hospital.png" style="width: 400px;" />
+</a>
+<p>At this point the a map similar to that above should be visible in the <strong>Scene View</strong>.</p>
+</section>
+<section id="ros-install">
+<h2>ROS Install<a class="headerlink" href="#ros-install" title="Link to this heading"></a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src
+git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>git@github.com:hiro-wpi/Gopher-ROS-Unity.git
+<span class="nb">cd</span><span class="w"> </span>..
+catkin_make
+</pre></div>
+</div>
+</section>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<p>Finally, to validate both instalations, run a basic simulation using the Gopher bot.</p>
+<section id="unity">
+<h3>Unity<a class="headerlink" href="#unity" title="Link to this heading"></a></h3>
+<p>Nagivate to the <strong>Prefabs</strong> folder and drag an instance of <strong>Gopher</strong> into the top level of the <strong>Hiearchy</strong> pane as shown below.</p>
+<a class="reference internal image-reference" href="_images/tree.png"><img alt="_images/tree.png" src="_images/tree.png" style="width: 400px;" />
+</a>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This instance should be deleted after the conclusion of this tutorial. When designing expiriments you will spawn robot agents programatically</p>
+</div>
+<p>Next create, in order to varify our connection we will create a simple model publisher.</p>
+<ol class="arabic simple">
+<li><p>Create a <strong>Empty Game Object</strong> in the top level of the <strong>Hiearchy</strong> pane named <cite>RosConnection</cite></p></li>
+<li><p>Add a <cite>PoseStampedPublisher</cite> script to the componant</p></li>
+<li><p>Drag the <cite>gopher/baselink</cite> object (a child of the gopher prefab) to the <strong>Published Transform</strong> field of the <cite>PoseStampedPublisher</cite> componant.</p></li>
+</ol>
+<p>The completed configuration should apear as below.</p>
+<a class="reference internal image-reference" href="_images/config.png"><img alt="_images/config.png" src="_images/config.png" style="width: 800px;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above aproach is purley for quickly validating the setup. It is not recomended to use the  <cite>PoseStampedPublisher</cite> for Robot links, as this should be handled in the TF tree.</p>
+</div>
+<p>Finally navigate to <strong>Robotics&gt;ROS Settings</strong> and ensure your <strong>ROS IP Address</strong> and <strong>ROS Port</strong> are correct.</p>
+</section>
+<section id="ros">
+<h3>ROS<a class="headerlink" href="#ros" title="Link to this heading"></a></h3>
+<p>Ensure all the relevant ROS workspaces are sourced and then run the following launch command.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>gopher_endpoint<span class="w"> </span>server.launch
+</pre></div>
+</div>
+</section>
+<section id="validation">
+<h3>Validation<a class="headerlink" href="#validation" title="Link to this heading"></a></h3>
+<p>With the <strong>gopher_endpoint</strong> server running, you may now start the unity project. If a connection is established, you will see blue arrows in the <strong>Game</strong> pane as shown below.</p>
+<a class="reference internal image-reference" href="_images/connection.png"><img alt="_images/connection.png" src="_images/connection.png" style="width: 400px;" />
+</a>
+<p>In a terminal connected to your <strong>ROS Master</strong> run the following command to echo the created model topic.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>model_pose
+</pre></div>
+</div>
+<p>Finally in the Unity <strong>Game</strong> pane, drive the robot base via the Arrow Keys. If you see the position update in the echoed topic you have successfully validated your setup.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Nursing Robot Simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Interfaces.html" class="btn btn-neutral float-right" title="Interfaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright workshop participant.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

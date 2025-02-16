@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expiriments &mdash; Nursing In Unity Simulation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Multi Agent" href="Multi-Agent.html" />
+    <link rel="prev" title="Autonomy" href="Autonomy.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Nursing In Unity Simulation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Enviornment-Building.html">Enviornment Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Objects.html">Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Agent-Building.html">Agent Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Autonomy.html">Autonomy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Expiriments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#task-related-properties">Task-related properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scene-setup">Scene Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spawnables">Spawnables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#robot">Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-related-functions">Task-related functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#task-status-functions">Task Status Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#object-generation-functions">Object Generation Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Multi-Agent.html">Multi Agent</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Nursing In Unity Simulation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Expiriments</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Expiriments.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="expiriments">
+<h1>Expiriments<a class="headerlink" href="#expiriments" title="Link to this heading"></a></h1>
+<p>In the Nursing Simulation Experiments represent a collection of <a class="reference internal" href="#tasks"><span class="std std-ref">Tasks</span></a> to be run in sequence.</p>
+<section id="tasks">
+<span id="id1"></span><h2>Tasks<a class="headerlink" href="#tasks" title="Link to this heading"></a></h2>
+<p>Tasks serve as a way to unify all elements of your simulation into one managable unit.
+The <cite>Task.cs</cite> abstract class provides the general structure of a Nursing Simulation task.
+Tasks contain information regaurding the task and its elements, as well as overidable functions for dictating the behavior of the task.
+Most of the information needed for a task can be provided from the <strong>inspector</strong>. The below sections go over task information which can be provided via the inspector.
+Tasks can be run individually via the <cite>RunTask.cs</cite> script.</p>
+<section id="task-related-properties">
+<h3>Task-related properties<a class="headerlink" href="#task-related-properties" title="Link to this heading"></a></h3>
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-TaskName">
+<span class="pre">public</span>&#160;  <span class="pre">string</span><span> </span><span class="sig-prename descclassname"><span class="pre">TaskName</span></span><a class="headerlink" href="#variable-TaskName" title="Link to this definition"></a></dt>
+<dd><p>Name of this task</p>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-TaskDescription">
+<span class="pre">public</span>&#160;  <span class="pre">string</span><span> </span><span class="sig-prename descclassname"><span class="pre">TaskDescription</span></span><a class="headerlink" href="#variable-TaskDescription" title="Link to this definition"></a></dt>
+<dd><p>Description of this task. <em>(Displayed on GUI)</em></p>
+</dd></dl>
+
+<section id="scene-setup">
+<h4>Scene Setup<a class="headerlink" href="#scene-setup" title="Link to this heading"></a></h4>
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SceneName">
+<span class="pre">public</span>&#160;  <span class="pre">string</span><span> </span><span class="sig-prename descclassname"><span class="pre">SceneName</span></span><a class="headerlink" href="#variable-SceneName" title="Link to this definition"></a></dt>
+<dd><p>Name of scene to use for task. Ex. <strong>Hospital</strong>.</p>
+</dd></dl>
+
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Spawning of robots, static objects, dynamic objects, task objects, and goal objects, are all handled by <a class="reference internal" href="#tasks"><span class="std std-ref">Tasks</span></a>. This means your Scene <strong>should not</strong> include these objects.</p>
+</div>
+</section>
+<section id="spawnables">
+<h4>Spawnables<a class="headerlink" href="#spawnables" title="Link to this heading"></a></h4>
+<p>Spawnables represent <strong>GameObjects</strong> whos spawning behavior is handled by <a class="reference internal" href="#tasks"><span class="std std-ref">Tasks</span></a>. This includes the Robot, goals, and all static and dynamic task objects.
+Spawnables are created in the <strong>Inspector</strong> using the <strong>Spawn Info</strong> struct.</p>
+<section id="spawninfo">
+<h5>SpawnInfo<a class="headerlink" href="#spawninfo" title="Link to this heading"></a></h5>
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="type-SpawnInfo">
+<span class="pre">public</span>&#160;  <span class="pre">struct</span> <span class="sig-name descname"><span class="pre">SpawnInfo</span></span><a class="headerlink" href="#type-SpawnInfo" title="Link to this definition"></a></dt>
+<dd><p>This type is now a parent for it childrens.</p>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SpawnInfo.gameObject">
+<span class="pre">public</span>&#160;  <span class="pre">GameObject</span><span> </span><span class="sig-prename descclassname"><span class="pre">gameObject</span></span><a class="headerlink" href="#variable-SpawnInfo.gameObject" title="Link to this definition"></a></dt>
+<dd><p><strong>GameObject</strong> to be spawned (given as prefab)</p>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SpawnInfo.position">
+<span class="pre">public</span>&#160;  <span class="pre">Vector3</span><span> </span><span class="sig-prename descclassname"><span class="pre">position</span></span><a class="headerlink" href="#variable-SpawnInfo.position" title="Link to this definition"></a></dt>
+<dd><p>Position to spawn object at.</p>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SpawnInfo.rotation">
+<span class="pre">public</span>&#160;  <span class="pre">Vector3</span><span> </span><span class="sig-prename descclassname"><span class="pre">rotation</span></span><a class="headerlink" href="#variable-SpawnInfo.rotation" title="Link to this definition"></a></dt>
+<dd><p>Rotation to spawn object wtih.</p>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SpawnInfo.trajectory">
+<span class="pre">public</span>&#160;  <span class="pre">Vector3</span><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">trajectory</span></span><a class="headerlink" href="#variable-SpawnInfo.trajectory" title="Link to this definition"></a></dt>
+<dd><p>Trajectory to spawn target object with given as waypoints</p>
+</dd></dl>
+
+<hr><dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SpawnInfo.StaticObjectSpawnArray">
+<span class="pre">public</span>&#160;  <a class="reference internal" href="#type-SpawnInfo" title="struct SpawnInfo"><span class="pre">SpawnInfo</span></a><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">StaticObjectSpawnArray</span></span><a class="headerlink" href="#variable-SpawnInfo.StaticObjectSpawnArray" title="Link to this definition"></a></dt>
+<dd><p>Array of static objects to be spawned. Used for things like unmovable obsticles.</p>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SpawnInfo.DynamicObjectSpawnArray">
+<span class="pre">public</span>&#160;  <a class="reference internal" href="#type-SpawnInfo" title="struct SpawnInfo"><span class="pre">SpawnInfo</span></a><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">DynamicObjectSpawnArray</span></span><a class="headerlink" href="#variable-SpawnInfo.DynamicObjectSpawnArray" title="Link to this definition"></a></dt>
+<dd><p>Array of dynamic objects to be spawned. Dynamic objects are expected to have a <strong>CharacterNavigation</strong> componant.</p>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SpawnInfo.TaskObjectSpawnArray">
+<span class="pre">public</span>&#160;  <a class="reference internal" href="#type-SpawnInfo" title="struct SpawnInfo"><span class="pre">SpawnInfo</span></a><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">TaskObjectSpawnArray</span></span><a class="headerlink" href="#variable-SpawnInfo.TaskObjectSpawnArray" title="Link to this definition"></a></dt>
+<dd><p>Array of task related objects to be spawned</p>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SpawnInfo.GoalObjectSpawnArray">
+<span class="pre">public</span>&#160;  <a class="reference internal" href="#type-SpawnInfo" title="struct SpawnInfo"><span class="pre">SpawnInfo</span></a><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">GoalObjectSpawnArray</span></span><a class="headerlink" href="#variable-SpawnInfo.GoalObjectSpawnArray" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="simple">
+<dt>2</dt><dd><p>Array of goal objects to be spawned. Goal objects are expected to have a <strong>Goal</strong> componant.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="robot">
+<h4>Robot<a class="headerlink" href="#robot" title="Link to this heading"></a></h4>
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="variable-SpawnInfo.robotSpawnArray">
+<span class="pre">public</span>&#160;  <a class="reference internal" href="#type-SpawnInfo" title="struct SpawnInfo"><span class="pre">SpawnInfo</span></a><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">robotSpawnArray</span></span><a class="headerlink" href="#variable-SpawnInfo.robotSpawnArray" title="Link to this definition"></a></dt>
+<dd><p>Array of static robots to be spawned</p>
+</dd></dl>
+
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The GUI will only be linked to the robot at <strong>index 0</strong> of <a class="reference internal" href="#variable-SpawnInfo.robotSpawnArray" title="SpawnInfo[] SpawnInfo.robotSpawnArray"><code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">robotSpawnArray</span></code></a></p>
+</div>
+</section>
+<section id="interface">
+<h4>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h4>
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp">
+<span class="pre">public</span>&#160;  <span class="pre">GraphicalInterface</span><span> </span><span class="sig-prename descclassname"><span class="pre">GoalObjectSpawnArray</span></span></dt>
+<dd><p>Graphical interface to be used in this task</p>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp">
+<span class="pre">public</span>&#160;  <span class="pre">ControlInterface</span><span> </span><span class="sig-prename descclassname"><span class="pre">GoalObjectSpawnArray</span></span></dt>
+<dd><p>Control interface to be used in this task</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="task-related-functions">
+<h3>Task-related functions<a class="headerlink" href="#task-related-functions" title="Link to this heading"></a></h3>
+<p>By overriding the following functions different task procedures can be implimented.</p>
+<section id="task-status-functions">
+<h4>Task Status Functions<a class="headerlink" href="#task-status-functions" title="Link to this heading"></a></h4>
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.CheckTaskStart">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">bool</span><span> </span><span class="sig-prename descclassname"><span class="pre">CheckTaskStart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.CheckTaskStart" title="Link to this definition"></a></dt>
+<dd><p>The default behavior of this function is to return <strong>False</strong> if no robot is present, or if the robot has not deviated more than 0.1m from the starting position, and <strong>True</strong> otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>True</strong> if task has started, <strong>False</strong> otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.GetTaskDuration">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">float</span><span> </span><span class="sig-prename descclassname"><span class="pre">GetTaskDuration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.GetTaskDuration" title="Link to this definition"></a></dt>
+<dd><p>The default behavior of this function is to return <strong>0</strong> if the task has not started and the current ellapsed time of the task otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current ellapsed time of task as a <strong>Float</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.CheckTaskCompletion">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">bool</span><span> </span><span class="sig-prename descclassname"><span class="pre">CheckTaskCompletion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.CheckTaskCompletion" title="Link to this definition"></a></dt>
+<dd><p>The default behavior of this function is to return <strong>False</strong> until a 10 minute timer has run out at which point it returns <strong>True</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>False</strong> if task is in progress or <strong>True</strong> if task has completed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.SetResult">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">string</span><span> </span><span class="sig-prename descclassname"><span class="pre">SetResult</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.SetResult" title="Link to this definition"></a></dt>
+<dd><p>Responsible for providing a human readable task status to the GUI</p>
+<p>The default behavior of this function is to return an empty string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Human readable task status string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.CheckInput">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">void</span><span> </span><span class="sig-prename descclassname"><span class="pre">CheckInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">string</span> <span class="sig-prename descclassname"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.CheckInput" title="Link to this definition"></a></dt>
+<dd><p>This function can be used for processing user input provided in the GUI. Ex. having users complete a secondary math task and proccessin thier answers.</p>
+<p>The default behavior of this function is to store the input in the <strong>userInput</strong> variable and set the <strong>userInputRecived</strong> flag to <strong>True</strong></p>
+<div class="docutils container">
+<strong>input:</strong> User input given from GUI</div>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.ResetTask">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">string</span><span> </span><span class="sig-prename descclassname"><span class="pre">ResetTask</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.ResetTask" title="Link to this definition"></a></dt>
+<dd><p>Used when a task needs to be reloaded.</p>
+<p>The default behavior of this function is to set the <strong>taskStarted</strong> flag to false.</p>
+</dd></dl>
+
+</section>
+<section id="object-generation-functions">
+<h4>Object Generation Functions<a class="headerlink" href="#object-generation-functions" title="Link to this heading"></a></h4>
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.GenerateStaticObjects">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">GameObject</span><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">GenerateStaticObjects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.GenerateStaticObjects" title="Link to this definition"></a></dt>
+<dd><p>This function is responsible for initializing <a class="reference internal" href="#variable-SpawnInfo.StaticObjectSpawnArray" title="SpawnInfo[] SpawnInfo.StaticObjectSpawnArray"><code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">StaticObjectSpawnArray</span></code></a> and making sure each initialized object is in the state it should be at the start of the task.</p>
+<p>The default behavior of this function is to spawn all items in <a class="reference internal" href="#variable-SpawnInfo.StaticObjectSpawnArray" title="SpawnInfo[] SpawnInfo.StaticObjectSpawnArray"><code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">StaticObjectSpawnArray</span></code></a> and store them in the <strong>staticObjects</strong> variable.
+:returns: Array of spawned GameObjects</p>
+</dd></dl>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When overriding Generate functions it is imparative to first call the super method. If you wish to only spawn some ojects, the reccomended way to do so is call the super method, and then iterate over the generated GameObjects and use the <strong>setActive</strong> function to disable any objects you dont wish to be present.</p>
+</div>
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.GenerateDynamicObjects">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">GameObject</span><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">GenerateDynamicObjects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.GenerateDynamicObjects" title="Link to this definition"></a></dt>
+<dd><p>This function is responsible for initializing <a class="reference internal" href="#variable-SpawnInfo.DynamicObjectSpawnArray" title="SpawnInfo[] SpawnInfo.DynamicObjectSpawnArray"><code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">DynamicObjectSpawnArray</span></code></a> and making sure each initialized object is in the state it should be at the start of the task.</p>
+<p>The default behavior of this function is to spawn all items in <a class="reference internal" href="#variable-SpawnInfo.DynamicObjectSpawnArray" title="SpawnInfo[] SpawnInfo.DynamicObjectSpawnArray"><code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">DynamicObjectSpawnArray</span></code></a> and store them in the <strong>dynamicObjects</strong> variable.
+As well as spawning the objects, this method populates each objects <strong>CharacterNavigation</strong> componant with the trajectory given by thier respective <a class="reference internal" href="#type-SpawnInfo" title="struct SpawnInfo"><code class="xref sphinxsharp sphinxsharp-type docutils literal notranslate"><span class="pre">SpawnInfo</span></code></a> trajectory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Array of spawned GameObjects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.GenerateTaskObjects">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">GameObject</span><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">GenerateTaskObjects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.GenerateTaskObjects" title="Link to this definition"></a></dt>
+<dd><p>This function is responsible for initializing <code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">TaskcObjectSpawnArray</span></code> and making sure each initialized object is in the state it should be at the start of the task.</p>
+<p>The default behavior of this function is to spawn all items in <code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">TaskcObjectSpawnArray</span></code> and store them in the <strong>taskObjects</strong> variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Array of spawned GameObjects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.GenerateGoalObjects">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">GameObject</span><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">GenerateGoalObjects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.GenerateGoalObjects" title="Link to this definition"></a></dt>
+<dd><p>This function is responsible for initializing <a class="reference internal" href="#variable-SpawnInfo.GoalObjectSpawnArray" title="SpawnInfo[] SpawnInfo.GoalObjectSpawnArray"><code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">GoalObjectSpawnArray</span></code></a> and making sure each initialized object is in the state it should be at the start of the task.</p>
+<p>The default behavior of this function is to spawn all items in <a class="reference internal" href="#variable-SpawnInfo.GoalObjectSpawnArray" title="SpawnInfo[] SpawnInfo.GoalObjectSpawnArray"><code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">GoalObjectSpawnArray</span></code></a> and store them in the <strong>goalObjects</strong> variable.
+As well as spawning the objects, this method populates the <strong>goals</strong> variable with the <strong>Goal</strong> componants of each spawned object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Array of spawned GameObjects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="csharp">
+<dt class="sig sig-object sphinxsharp" id="method-SpawnInfo.GenerateRobots">
+<span class="pre">public</span>&#160; <span class="pre">virtual</span> <span class="pre">GameObject</span><span class="pre">[]</span><span> </span><span class="sig-prename descclassname"><span class="pre">GenerateRobots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-SpawnInfo.GenerateRobots" title="Link to this definition"></a></dt>
+<dd><p>This function is responsible for initializing <a class="reference internal" href="#variable-SpawnInfo.robotSpawnArray" title="SpawnInfo[] SpawnInfo.robotSpawnArray"><code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">robotSpawnArray</span></code></a> and making sure each initialized object is in the state it should be at the start of the task.</p>
+<p>The default behavior of this function is to spawn all items in <a class="reference internal" href="#variable-SpawnInfo.robotSpawnArray" title="SpawnInfo[] SpawnInfo.robotSpawnArray"><code class="xref sphinxsharp sphinxsharp-var docutils literal notranslate"><span class="pre">robotSpawnArray</span></code></a> and store them in the <strong>robots</strong> variable.
+As well as spawning robots this method is also responsible for linking the GUI to the first robot as well as the current task.
+:returns: Array of spawned GameObjects</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Autonomy.html" class="btn btn-neutral float-left" title="Autonomy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Multi-Agent.html" class="btn btn-neutral float-right" title="Multi Agent" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright workshop participant.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
